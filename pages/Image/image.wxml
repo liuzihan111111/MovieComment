@@ -1,0 +1,4 @@
+<!--pages/Image/image.wxml-->
+<view class='Showimage'>
+  <image class='simg'  wx:for="{{ImageList}}" src='{{item.image}}'  wx:key="{{item.id}}"></image>
+</view>

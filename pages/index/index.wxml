@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper
+  class='swiper'
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+  indicator-dots="{{indicatorDots}}"
+  indicator-color="#000"
+  indicator-active-color="#fff"
+  >
+  <block wx:for="{{imgUrls}}" wx:key="{{index}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" height="150" />
+    </swiper-item>
+  </block>
+  </swiper>
+  <view class='list'>
+    <view bindtap='navToPage' data-tag="hot" class='list-item'>
+      <image class='icon' src='../../assets/images/h.png'></image>
+      <text class='title'>正在热映</text>
+    </view>
+    <view bindtap='navToPage' data-tag="comingsoon" class='list-item'>
+      <image class='icon' src='../../assets/images/h.png'></image>
+      <text class='title'>正在售票</text>
+    </view>
+    <view bindtap='navToPage' data-tag="jd" class='list-item'>
+      <image class='icon' src='../../assets/images/h.png'></image>
+      <text class='title'>经典回顾</text>
+    </view>
+    <view bindtap='navToPage' data-tag="new" class='list-item'>
+      <image class='icon' src='../../assets/images/h.png'></image>
+      <text class='title'>即将上映</text>
+    </view>
+  </view>
+
+</view>

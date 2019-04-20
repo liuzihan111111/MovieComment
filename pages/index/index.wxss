@@ -1,0 +1,46 @@
+/**index.wxss**/
+.swiper{
+  width: 100%;
+}
+.list {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.slide-image{
+  width: 100%
+}
+.list-item {
+  width: 40%;
+  height: 200rpx;
+  margin: 10rpx;
+  border-radius: 40rpx;
+  box-shadow:15rpx 10rpx 10rpx #ccc;
+
+}
+.list-item:nth-child(1) {
+  background-color: deeppink;
+}
+.list-item:nth-child(2) {
+  background-color: orange;
+}
+.list-item:nth-child(3) {
+  background-color: greenyellow;
+}
+.list-item:nth-child(4) {
+  background-color: blueviolet;
+}
+.icon {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 20rpx auto;
+  display: block;
+}
+.title {
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  display: block;
+  font-size: 36rpx;
+}

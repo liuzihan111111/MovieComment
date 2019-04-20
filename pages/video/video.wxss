@@ -1,0 +1,16 @@
+/* pages/video/video.wxss */
+.video-item{
+  border-bottom: 4rpx solid #a8acaa;
+  margin-top: 10rpx;
+  padding-bottom: 20rpx;
+  margin-bottom: 30rpx;
+}
+.v-title{
+  line-height: 100rpx;
+  font-size: 36rpx;
+  padding-left: 20rpx;
+}
+.video{
+  width: 100%;
+  height: 400rpx
+}

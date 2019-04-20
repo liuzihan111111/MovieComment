@@ -1,0 +1,12 @@
+/* pages/Image/image.wxss */
+.Showimage{
+  display: flex;
+  justify-content: space-around;
+  padding: 20rpx;
+  flex-wrap: wrap
+}
+.simg{
+  width: 165rpx;
+  height: 180rpx;
+  margin: 9rpx 0;
+}

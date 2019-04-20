@@ -1,0 +1,54 @@
+/* pages/actors/actor.wxss */
+
+.type{
+}
+.typeName{
+  display: block;
+  widows: 100%;
+  font-size: 32rpx;
+  line-height: 50rpx;
+  padding-left: 30rpx;
+  background: #f6f6f6;
+  border-bottom: 2rpx solid #dfdfdf;
+  border-top: 2rpx solid #dfdfdf;
+   color: #999;
+}
+.typeCon{
+  padding: 0 40rpx;
+}
+.typeList{
+  border-bottom: 2rpx solid #d8d8d8;
+  padding: 40rpx 0;
+  display: flex;
+}
+.tImg{
+  width: 168rpx;
+  height:215rpx;
+  margin-right: 30rpx;
+  flex-shrink: 0
+}
+.PAllName{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  flex: 1
+}
+.PName{
+  font-size: 40rpx;
+  font-weight: bolder
+}
+.PNameEn{
+  font-size: 36rpx;
+  color:#bbb;
+}
+/* 返回顶部 */
+.goTop{
+  height: 80rpx;
+  width: 80rpx;
+  border: 2rpx solid #dbdbdb;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 50rpx;
+  right: 30rpx;
+}

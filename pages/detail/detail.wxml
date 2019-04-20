@@ -1,0 +1,65 @@
+<view style='position:relative' class='wrap'>
+  <view style='  background-image: url({{movieDetail.basic.img}}) ' class='bg'></view>
+<view class='cinemabox' >
+  <view  bindtap='VideoClick' data-id="{{movieDetail.basic.movieId}}">
+    <image src="../../assets/images/bf.png" class='bf'></image>
+    <image src="{{movieDetail.basic.img}}" class='dmovie'></image>
+  </view>
+  <view class='right'>
+    <text class='name'>{{movieDetail.basic.name}}</text>
+    <text class='nameEn'>{{movieDetail.basic.nameEn}}</text>
+    <text class='mlength'>{{movieDetail.basic.mins}}</text>
+    <view class='type' >
+      <text wx:for="{{movieDetail.basic.type}}" wx:key="{{index}}">{{item}} /</text>
+    </view>
+    <text class='shangying' wx:if="{{movieDetail.basic.releaseArea}}">{{time}}{{movieDetail.basic.releaseArea}}上映</text>
+  </view>
+</view>
+ <text class="Special"  wx:if="{{movieDetail.basic.commentSpecial}}">{{movieDetail.basic.commentSpecial}}</text>
+ <text class="Special"  wx:else>暂无描述</text>
+</view>
+<view class='dec'>
+  <view class="story {{isFold?'hide':'show'}} ">{{movieDetail.basic.story}}</view>
+  <view class='opa'><image class='opaText'  src="{{isFold?'../../assets/images/xjt.png':'../../assets/images/sjt.png'}}" bindtap='showAll'></image></view>
+</view>
+
+<view class='actors'>
+  <view class='a-top'>
+    <text class='a-title'>{{movieDetail.basic.actors.length}}位演员</text>
+    <image class='actors-icon'  src='../../assets/images/xjt.png' bindtap='showAllActors' data-id="{{movieDetail.basic.movieId}}"></image>
+  </view>
+  <view class='a-content'>
+    <view class='director'>
+    <text class='d-title'>导演</text>
+    <image  src='{{movieDetail.basic.director.img}}' class='d-img'></image>
+    <text class='a-name'>{{movieDetail.basic.director.name}}</text>
+     <text class='a-nameEn'>{{movieDetail.basic.director.nameEn}}</text>
+  </view>
+  <view class='actorsAll'>
+    <text class='d-title'>主要演员</text>
+    <view class='a-a-content'>
+      <view  class='a-list' wx:for="{{actors}}"  wx:key="{{index}}">
+        <image  src='{{item.img}}' class='a-img'></image>
+        <text class='a-name'>{{item.name}}</text>
+        <text class='a-nameEn'>{{item.nameEn}}</text>
+      </view>
+    </view>  
+  </view>
+  </view>
+</view>
+<view class='image'>
+  <view class='a-top'>
+    <text class='a-title'>图片</text>
+    <image class='actors-icon'  src='../../assets/images/xjt.png' bindtap='showAllImage' data-id="{{movieDetail.basic.movieId}}"></image>
+  </view>
+  <view class='imageAll'>
+    <image  src='{{item.imgUrl}}' class='i-img' wx:for="{{movieDetail.basic.stageImg.list}}"   wx:key="index"></image>
+  </view>
+</view>
+<view class='image'>
+  <view class='a-top'>
+    <text class='a-title'>影评</text>
+    <image class='actors-icon'  src='../../assets/images/xjt.png' bindtap='showAllComment' data-id="{{movieDetail.basic.movieId}}"></image>
+  </view>
+</view>
+ 

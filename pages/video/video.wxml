@@ -1,0 +1,7 @@
+<!--pages/video/video.wxml-->
+<view class='videoList'>
+  <view class='video-item'  wx:for="{{video}}"  wx:key="{{item.id}}">
+    <video src="{{item.url}}" controls poster="{{item.image}}" class='video'></video>
+    <text  class='v-title'>{{item.title}}</text>
+  </view>
+</view>

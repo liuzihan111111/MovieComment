@@ -1,0 +1,16 @@
+<!--pages/comments/comments.wxml-->
+<view class='wrap'>
+  <view class='m-item'  wx:for="{{list}}"  wx:key="index">
+    <text class='mTitle'>{{item.title}}</text>
+    <text class='mCon'>{{item.content}}</text>
+    <view class='m-user'>
+      <image  src='{{item.headurl}}'  class='m-header'></image>
+      <view class='m-userCon'>
+        <text class='m-userName'>{{item.nickname}}</text>
+        <text class='m-userTime'>{{item.modifyTime}}</text>
+      </view>
+    </view>
+  </view>
+  
+
+</view>

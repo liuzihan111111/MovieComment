@@ -1,0 +1,14 @@
+<!--pages/list/index.wxml-->
+<view class='list'>
+  <view wx:for="{{movieList}}" wx:key="{{item.id}}"  class='list-item' bindtap='DetailPage' data-id="{{item.id}}">
+    <image src="{{item.img}}" mode='scaleToFill' class='img'></image>
+    <view class='right'>
+      <text class='title'>{{item.tCn}}</text>
+       <text class='dec'>{{item.commonSpecial}}</text>
+      <text class='content'>类型：{{item.movieType}} </text>
+      <text class='content'> 影片时长：{{item.d}}分钟</text>
+    </view>
+  </view>
+</view>
+ <image src='../../assets/images/goback.png' class="goTop"
+     bindtap="goTop"  wx:if="{{floorstatus == true}}"></image>

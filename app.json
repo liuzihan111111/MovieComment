@@ -1,0 +1,48 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/list/index",
+    "pages/me/use",
+    "pages/find/index",
+    "pages/detail/detail",
+    "pages/video/video",
+    "pages/actors/actor",
+    "pages/Image/image",
+    "pages/comments/comments"
+  ],
+  "window": {
+    "backgroundTextStyle": "dark",
+    "navigationBarBackgroundColor": "#cecece",
+    "navigationBarTitleText": "Smovies",
+    "navigationBarTextStyle": "black"  
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "assets/images/h.png",
+        "selectedIconPath": "assets/images/h-sel.png"
+      },
+      {
+        "pagePath": "pages/list/index",
+        "text": "热映",
+        "iconPath": "assets/images/fav.png",
+        "selectedIconPath": "assets/images/fav-sel.png"
+      },
+      {
+        "pagePath": "pages/find/index",
+        "text": "发现",
+        "iconPath": "assets/images/his.png",
+        "selectedIconPath": "assets/images/his-sel.png"
+      },
+      {
+        "pagePath": "pages/me/use",
+        "text": "我",
+        "iconPath": "assets/images/u.png",
+        "selectedIconPath": "assets/images/u-sel.png"
+      }
+    ]
+  }
+}

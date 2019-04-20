@@ -1,0 +1,3 @@
+<!--pages/me/use.wxml-->
+<text>pages/me/use.wxml</text>
+<web-view src='http://bd.maoni521.com'></web-view>

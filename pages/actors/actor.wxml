@@ -1,0 +1,17 @@
+<!--pages/actors/actor.wxml-->
+<view class='yz'>
+  <view class='type'  wx:for="{{actors}}"  wx:key="{{index}}">
+    <text class='typeName'>{{item.typeName}}</text>
+    <view class='typeCon'>
+      <view class='typeList' wx:for="{{item.persons}}"  wx:for-item="person" wx:key="{{person.id}}">
+        <image src='{{person.image}}'  class='tImg'></image>
+        <view class='PAllName'>
+          <text class='PName'>{{person.name}}</text>
+          <text class='PNameEn'>{{person.nameEn}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+    <image src='../../assets/images/goback.png' class="goTop"
+     bindtap="goTop"  wx:if="{{floorstatus == true}}"></image>
+</view>
