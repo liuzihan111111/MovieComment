@@ -1,30 +1,43 @@
-// pages/Image/image.js
-
-const movies = require('../../sevices/api.js')
-
-
+// pages/newDetail/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    ListALL:[],
-    ImageList:[],
-    num:49,
+    data:null
   },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    const id = options.id;
-    movies.getMovieImageList(id, (res) => {
-      console.log(res)
-      this.setData({
-        ListALL: res.data.images,
-        ImageList: res.data.images.splice(0,24)
-      })
+    console.log(options)
+    wx.showLoading({
+      title: '加载中。。。',
+      mask: true,
+     
     })
+    wx.request({
+      url: 'https://unidemo.dcloud.net.cn/api/news/36kr/' + options.id,
+      data: '',
+      header: {},
+      method: 'GET',
+      dataType: 'json',
+      responseType: 'text',
+      success: res=> {
+        console.log(res)
+        this.setData({
+          data:res.data
+        })
+     //   wx.hideLoading()
+      },
+      fail: function(res) {},
+      complete: function(res) {
+        wx.hideLoading()
+      },
+    })
+   
   },
 
   /**
@@ -59,19 +72,14 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    console.log('下拉刷新')
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-    this.setData({
-      num: this.data.num + 24,
-      ImageList: this.data.ListALL.splice(0, this.data.num),
-    })
-    console.log('上拉加载')
+
   },
 
   /**

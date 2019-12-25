@@ -9,6 +9,7 @@
   indicator-dots="{{indicatorDots}}"
   indicator-color="#000"
   indicator-active-color="#fff"
+  circular="true"
   >
   <block wx:for="{{imgUrls}}" wx:key="{{index}}">
     <swiper-item>
@@ -16,7 +17,26 @@
     </swiper-item>
   </block>
   </swiper>
-  <view class='list'>
+  <view class="new_list">
+   <!--  <view class="new_item" wx:for="{{newList}}" wx:key='{{item.id}}'>
+      <image class="list-logo" src="{{item.author_avatar}}" mode="scaleToFill"></image>
+      <view class="list-body">
+        <view class="list-title">{{item.title}}</view>
+        <view class="list-time">{{item.created_at}}</view>
+      </view> -->
+      <block wx:for="{{newList}}"  wx:key="item.id">
+        <view class="uni-list-cell"  data-newsId="{{item.post_id}}" bindtap="goNewsDetail"> 
+          <view class="uni-media-list">
+            <image class="uni-media-list-logo" src="{{item.author_avatar}}"></image>
+            <view class="uni-media-list-body">
+              <view class="uni-media-list-text-top">{{item.title}}</view>
+              <view class="uni-media-list-text-bottom uni-ellipsis"><text style="color:blue">{{item.author_name}}</text>   {{item.created_at}}</view>
+            </view>
+          </view>
+        </view>
+      </block>
+  </view>
+  <!-- <view class='list'>
     <view bindtap='navToPage' data-tag="hot" class='list-item'>
       <image class='icon' src='../../assets/images/h.png'></image>
       <text class='title'>正在热映</text>
@@ -34,5 +54,5 @@
       <text class='title'>即将上映</text>
     </view>
   </view>
-
+ -->
 </view>

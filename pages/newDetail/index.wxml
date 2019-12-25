@@ -1,0 +1,8 @@
+<!--pages/newDetail/index.wxml-->
+<view class="container detail-wrap">
+  <view class="top" >
+    <view class="title">{{data.title}}</view>
+     <view class="summary">{{data.summary}}</view>
+  </view>
+  <view class="content"><rich-text class="con-detail" nodes="{{data.content}}"></rich-text></view>
+</view>

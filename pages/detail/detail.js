@@ -64,6 +64,7 @@ Page({
         time: date.DateFormate(res.data.data.basic.releaseDate),
         actors: res.data.data.basic.actors.slice(0,4)
       })
+      /* 重置页面标题 */
       wx.setNavigationBarTitle({
         title: res.data.data.basic.name
       })

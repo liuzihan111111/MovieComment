@@ -22,7 +22,8 @@ Page({
     autoplay: true,
     interval: 5000,
     duration: 1000,
-    indicatorDots:true
+    indicatorDots:true,
+    newList:[] // 新闻列表
   },
   //事件处理函数
   navToPage(event){
@@ -40,9 +41,40 @@ Page({
       
     }
   },
+  // 新闻列表
+  getNewsList(){
+   
+    wx.request({
+      url: 'https://unidemo.dcloud.net.cn/api/news',
+      method: 'GET',
+      data: {},
+      success: res=> {
+        console.log(res.data);
+        this.setData({
+          newList:res.data
+        }) 
+      
+        console.log(this.newList)
+      },
+      fail: function fail() { },
+      complete: function complete() { }
+    });
+
+  },
+  // 跳转到新闻详情页
+  goNewsDetail(e){
+    console.log(e.currentTarget.dataset.newsid)
+    let id = e.currentTarget.dataset.newsid
+    wx.navigateTo({
+      url: '../newDetail/index?id='+id,
+    })
+  },
+
 
 
   onLoad: function () {
+
+    this.getNewsList()
 
     const obj = {name:'tom',age:16}
 

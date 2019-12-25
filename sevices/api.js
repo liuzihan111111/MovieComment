@@ -3,7 +3,7 @@ const tools = require('../utils/tools.js')
 // 正在热映
 function getMovieHot(cb){
   tools.getFetch('https://api-m.mtime.cn/Showtime/LocationMovies.api', { locationId: 290 }, cb)
-}
+} 
 // 电影详情
 function getMovieDetail(id,cb){
   tools.getFetch('https://ticket-api-m.mtime.cn/movie/detail.api', {locationId:290,movieId:id},cb)

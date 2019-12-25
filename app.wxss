@@ -6,4 +6,8 @@
   align-items: center;
   justify-content: space-between;
   box-sizing: border-box;
+  width: 100%
 } 
+page{
+  height: 100%
+}

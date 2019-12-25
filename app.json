@@ -9,13 +9,14 @@
     "pages/video/video",
     "pages/actors/actor",
     "pages/Image/image",
-    "pages/comments/comments"
+    "pages/comments/comments",
+    "pages/newDetail/index"
   ],
   "window": {
     "backgroundTextStyle": "dark",
     "navigationBarBackgroundColor": "#cecece",
     "navigationBarTitleText": "Smovies",
-    "navigationBarTextStyle": "black"  
+    "navigationBarTextStyle": "black"
   },
   "tabBar": {
     "list": [
@@ -32,17 +33,12 @@
         "selectedIconPath": "assets/images/fav-sel.png"
       },
       {
-        "pagePath": "pages/find/index",
-        "text": "发现",
-        "iconPath": "assets/images/his.png",
-        "selectedIconPath": "assets/images/his-sel.png"
-      },
-      {
         "pagePath": "pages/me/use",
         "text": "我",
         "iconPath": "assets/images/u.png",
         "selectedIconPath": "assets/images/u-sel.png"
       }
     ]
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }

@@ -1,17 +1,18 @@
 /**index.wxss**/
 .swiper{
   width: 100%;
+  height: 150px
 }
-.list {
+/* .list {
   width: 100%;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-}
+} */
 .slide-image{
   width: 100%
 }
-.list-item {
+/* .list-item {
   width: 40%;
   height: 200rpx;
   margin: 10rpx;
@@ -43,4 +44,57 @@
   color: #fff;
   display: block;
   font-size: 36rpx;
+} */
+
+/* 新闻列表 */
+.new_list{
+  flex: 1;
+  width:100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  
+}
+.uni-list-cell {
+background: #fafafa;
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border-bottom: 1px solid #a59999
+}
+.uni-media-list {
+padding: 22rpx 30rpx;
+box-sizing: border-box;
+display: flex;
+width: 100%;
+}
+.uni-media-list-logo {
+height: 84rpx;
+width: 84rpx;
+margin-right: 20rpx;
+}
+.uni-media-list-body {
+ height: auto;
+display: flex;
+flex: 1;
+flex-direction: column;
+align-items: flex-start;
+overflow: hidden; 
+}
+.uni-media-list-text-top{
+  line-height: 1.6rem;
+  font-size: 34rpx
+}
+.uni-media-list-text-bottom {
+width: 100%;
+line-height: 30rpx;
+font-size: 28rpx;
+color: #8f8f94;
+
+}
+.uni-ellipsis {
+overflow: hidden;
+white-space: nowrap;
+text-overflow: ellipsis;
+
 }
